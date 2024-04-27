@@ -1,5 +1,4 @@
 """Functions to manage a users shopping cart items."""
-from icecream import ic
 
 def add_item(current_cart: dict, items_to_add: list) -> dict:
     """Add items to shopping cart.
@@ -84,8 +83,3 @@ def update_store_inventory(fulfillment_cart, store_inventory):
 
     return store_inventory
 
-
-print(update_store_inventory({'Orange': [1, 'Aisle 4', False], 'Milk': [2, 'Aisle 2', True], 'Banana': [3, 'Aisle 5', False], 'Apple': [2, 'Aisle 4', False]},
-{'Banana': [15, 'Aisle 5', False], 'Apple': [12, 'Aisle 4', False], 'Orange': [1, 'Aisle 4', False], 'Milk': [4, 'Aisle 2', True]}))
-
-# {'Banana': [12, 'Aisle 5', False], 'Apple': [10, 'Aisle 4', False], 'Orange': ['Out of Stock', 'Aisle 4', False], 'Milk': [2, 'Aisle 2', True]})
