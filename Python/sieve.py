@@ -5,11 +5,3 @@ def primes(limit: int) -> list[int]:
             if number*temporal_index in valid_primes:
                 valid_primes.remove(number*temporal_index)
     return valid_primes
-
-
-def main():
-    print(primes(200))
-
-
-if __name__ == '__main__':
-    main()
