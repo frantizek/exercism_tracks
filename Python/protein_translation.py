@@ -38,3 +38,82 @@ def proteins(strand: str) -> list:
         if "UGA" in single_strand:
             break
     return prot
+
+
+
+
+
+print(proteins("AUG"))
+# expected = ["Methionine"]
+
+print(proteins("UUU"))
+# expected = ["Phenylalanine"]
+
+print(proteins("UUC"))
+# expected = ["Phenylalanine"]
+
+print(proteins("UUA"))
+# expected = ["Leucine"]
+
+print(proteins("UUG"))
+# expected = ["Leucine"]
+
+print(proteins("UCU"))
+# expected = ["Serine"]
+
+print(proteins("UCC"))
+# expected = ["Serine"]
+
+print(proteins("UCA"))
+# expected = ["Serine"]
+
+print(proteins("UCG"))
+# expected = ["Serine"]
+
+print(proteins("UAU"))
+# expected = ["Tyrosine"]
+
+print(proteins("UAC"))
+# expected = ["Tyrosine"]
+
+print(proteins("UGU"))
+# expected = ["Cysteine"]
+
+print(proteins("UGC"))
+# expected = ["Cysteine"]
+
+print(proteins("UGG"))
+# expected = ["Tryptophan"]
+
+print(proteins("UAA"))
+# expected = []
+
+print(proteins("UAG"))
+# expected = []
+
+print(proteins("UGA"))
+# expected = []
+
+print(proteins("UUUUUU"))
+# expected = ["Phenylalanine", "Phenylalanine"]
+
+print(proteins("UUAUUG"))
+# expected = ["Leucine", "Leucine"]
+
+print(proteins("AUGUUUUGG"))
+# expected = ["Methionine", "Phenylalanine", "Tryptophan"]
+
+print(proteins("UAGUGG"))
+# expected = []
+
+print(proteins("UGGUAG"))
+# expected = ["Tryptophan"]
+
+print(proteins("AUGUUUUAA"))
+# expected = ["Methionine", "Phenylalanine"]
+
+print(proteins("UGGUAGUGG"))
+# expected = ["Tryptophan"]
+
+print(proteins("UGGUGUUAUUAAUGGUUU"))
+# expected = ["Tryptophan", "Cysteine", "Tyrosine"]
