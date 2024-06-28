@@ -1,4 +1,4 @@
-def convert(number):
+def convert(number: int) -> str:
     Pli = "Pling"  # 3
     Pla = "Plang"  # 5
     Plo = "Plong"  # 7
@@ -18,4 +18,4 @@ def convert(number):
     elif number % 7 == 0:
         return Plo
     else:
-        return number
+        return str(number)

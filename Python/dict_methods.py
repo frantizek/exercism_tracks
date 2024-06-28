@@ -1,4 +1,5 @@
 """Functions to manage a users shopping cart items."""
+from icecream import ic
 
 def add_item(current_cart: dict, items_to_add: list) -> dict:
     """Add items to shopping cart.
@@ -82,4 +83,3 @@ def update_store_inventory(fulfillment_cart, store_inventory):
                     store_inventory[k][0] -= fulfillment_cart[k][0]
 
     return store_inventory
-
