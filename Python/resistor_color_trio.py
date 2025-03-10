@@ -15,7 +15,7 @@ def label(colors: list[str]) -> str:
     if len(colors) <=2:
         return "0 ohms"
     else:
-        resistor_value_in_ohms = int(f"{str(int(RESISTOR_COLOR_VALUES[colors[0].lower()]))}{str(int(RESISTOR_COLOR_VALUES[colors[1].lower()]))}{"0"*(int(RESISTOR_COLOR_VALUES[colors[2].lower()]))}")
+        resistor_value_in_ohms = int(f"{str(int(RESISTOR_COLOR_VALUES[colors[0].lower()]))}{str(int(RESISTOR_COLOR_VALUES[colors[1].lower()]))}{'0'*(int(RESISTOR_COLOR_VALUES[colors[2].lower()]))}")
         if resistor_value_in_ohms < 1000:
             return f"{resistor_value_in_ohms} ohms"
         elif 1000 <= resistor_value_in_ohms < 1000000:
