@@ -1,6 +1,4 @@
 """Functions to manage a users shopping cart items."""
-from icecream import ic
-
 def add_item(current_cart: dict, items_to_add: list) -> dict:
     """Add items to shopping cart.
 
@@ -8,7 +6,6 @@ def add_item(current_cart: dict, items_to_add: list) -> dict:
     :param items_to_add: iterable - items to add to the cart.
     :return: dict - the updated user cart dictionary.
     """
-
     for item in items_to_add:
         if item in current_cart:
             current_cart[item] += 1
@@ -49,7 +46,6 @@ def sort_entries(cart: dict) -> dict:
     :param cart: dict - a users shopping cart dictionary.
     :return: dict - users shopping cart sorted in alphabetical order.
     """
-
     return sorted(cart.items())
 
 
@@ -73,7 +69,6 @@ def update_store_inventory(fulfillment_cart, store_inventory):
     :param store_inventory: dict - store available inventory
     :return: dict - store_inventory updated.
     """
-
     for k in fulfillment_cart.keys():
         if store_inventory[k][0]:
             if store_inventory[k][0] > 0:
