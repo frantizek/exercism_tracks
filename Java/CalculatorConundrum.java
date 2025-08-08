@@ -8,15 +8,17 @@ class CalculatorConundrum {
         } else if ("".equals(operation)){
             throw new IllegalArgumentException("Operation cannot be empty");
         } else if ("+".equals(operation)) {
-            return "" + operand1 + " + " + operand2 + " = " + (operand1 + operand2);
+            return String.format("%d + %d = %d", operand1, operand2, operand1 + operand2);
         } else if ("*".equals(operation)) {
-            return "" + operand1 + " * " + operand2 + " = " + (operand1 * operand2);
+            return String.format("%d * %d = %d", operand1, operand2, operand1 * operand2);
         } else if ("/".equals(operation)) {
-            if (operand2 == 0) {
-                return "" + operand1 + " / " + operand2 + " = undefined";
-            } else {
-                return "" + operand1 + " / " + operand2 + " = " + (operand1 / operand2);
+
+            try {
+                return String.format("%d / %d = %d", operand1, operand2, operand1 / operand2);
+            } catch (ArithmeticException e) {
+                throw new IllegalOperationException("Division by zero is not allowed", e);
             }
+
         } else {
             throw new IllegalOperationException("Operation '" + operation + "' does not exist");
         }
